@@ -1,0 +1,44 @@
+.banner {
+    max-width: 100%;
+    padding-block: 2.5rem;
+    overflow: hidden;
+
+    & .scroller {
+        width: 100%;
+        overflow: hidden;
+        padding-block: 1rem;
+    }
+
+    & .rolling {
+        display: flex;
+        gap: 1.5rem;
+
+        animation: rolling 2s linear infinite;
+    }
+
+    & .bg-gradient-animate {
+        background: linear-gradient(45deg,
+                var(--color-snitap-sky-light),
+                var(--color-snitap-joy-light));
+
+        background-size: 400%;
+        background-position: 0 50%;
+
+        position: bgradient-animate;
+        animation: bg-gradient-animate 20s ease infinite;
+    }
+}
+
+
+@keyframes bg-gradient-animate {
+    50% {
+        background-position: 100% 50%;
+    }
+}
+
+@keyframes rolling {
+    to {
+        transform: translateX(-132px);
+    }
+
+}
